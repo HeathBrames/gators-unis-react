@@ -1,0 +1,707 @@
+body{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.paddingcon{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/*----------NAVIGATION BAR CSS---------------*/
+.navbar{
+    background: transparent;
+    transition: 0.25s ease-in;
+}
+
+.navbar.scrolled{
+    background-color: rgb(0, 33, 165);
+}
+
+#navigation-bar{
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,0.25);
+}
+
+#navbarResponsive ul li a{
+    font-size: 20px;
+    padding: 15px;
+    /*text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;*/
+    margin-left: 0x;
+}
+
+.nav-item{
+    position: relative;
+}
+
+.nav-item:hover{
+    color:white;
+}
+    
+.nav-item:after{
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0%;
+    border-bottom: 5px solid white;
+    transition: 0.3s ease-in-out;
+}
+    
+.nav-item:hover:after {
+    width: 100%;
+}
+
+.navbar-brand{
+    padding-bottom: .1rem;
+}
+
+
+
+
+/*------------CAROUSEL CSS------------------*/
+.carousel-caption{
+    transform: translateX(-17%) translateY(-10vw);
+    position: absolute;
+    text-align: left;
+}
+
+.carousel-caption h2{
+    font-family: Oswald;
+    text-transform: uppercase;
+    text-align: center;
+
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+}
+
+.carousel-indicators{
+    padding: 10px;
+}
+
+.carousel-indicators li:hover{
+    cursor: pointer;
+}
+
+.carousel-indicators li{
+    margin: 5px;
+    width: 50px;
+    height: 4px;
+}
+
+
+#slides{
+    top: -85px;
+}
+
+#bigHeading{
+    font-size: 5.75vw;
+}
+
+#smallHeading{
+    font-family: Robot 'Regular';
+    font-size: 1.63vw;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    /*text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;*/
+}
+
+#buttonCSS{
+    font-family: Oswald;
+    font-size: 1.6vw;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+/*--------------NEWS BAR--------------*/
+.news-bar{
+    transform: translateY(-2vw);
+}
+
+.news-bar h1{
+        font-family: Oswald;
+        text-transform: uppercase;
+        text-align: center;
+    
+        padding: 0px;
+        margin: 0px;
+        font-size: 6vw;
+}
+
+
+
+
+
+/*-------------NEWS GALLERY------------------------*/
+.conatiner-gallery,
+.container-gallery::before,
+.container-gallery::after{
+    padding: 0;
+    box-sizing: border-box;
+    margin: auto;
+
+}
+
+.container-gallery{
+    width: 100%;
+    max-width: 120rem;
+    margin: auto;
+    padding: 0 1.5rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.news-gallery{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 4.0rem;
+    grid-template-areas: 
+        'img-1 img-2 img-3'
+}
+
+.news-gallery a{
+    width: 100%;
+    height: 20vw;
+    
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-gallery a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.news-gallery a:hover i,
+.news-gallery a:hover::before{
+    opacity: 1;
+
+}
+
+
+.news-gallery .img-1{
+    grid-area: img-1;
+    background-image: url("images/Zero.jpg");
+    box-shadow: inset 0px -100px 30px rgba(0, 0, 0, 0.6);
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(114, 114, 114, 0.5));
+    filter: drop-shadow(1px 1px 1px rgb(114, 114, 114));
+}
+
+.news-gallery .img-2{
+    grid-area: img-2;
+    background-image: url("images/mullenwebsite.jpeg");
+    box-shadow: inset 0px -100px 30px rgba(0, 0, 0, 0.6);
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(114, 114, 114, 0.5));
+    filter: drop-shadow(1px 1px 1px rgb(114, 114, 114));
+}
+
+.news-gallery .img-3{
+    grid-area: img-3;
+    background-image: url("images/FSUnews.jpg");
+    box-shadow: inset 0px -100px 30px rgba(0, 0, 0, 0.6);
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(114, 114, 114, 0.5));
+    filter: drop-shadow(1px 1px 1px rgb(114, 114, 114));
+}
+
+.img-caption{
+    position: absolute;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 24pt;
+    bottom: 15px;
+    left: 15px;
+}
+
+.img-sub-caption{
+    color: white;
+    font-family: 'Roboto';
+    font-size: 13pt;
+}
+
+
+
+
+
+/*-------------DATABASE HEADER------------*/
+.database-heading h1{
+    text-align: center;
+    font-family: Oswald;
+    text-transform: uppercase;
+    font-size: 6vw;
+    transform: none;
+    padding-top: 4vw;
+}
+
+
+
+
+
+
+
+
+/*-------------DATABASE GALLERY---------*/  
+.database-container {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.database-gallery{
+    display: flex;
+    margin: 3.5vw;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.database-gallery .card {
+    margin-top: 0rem;
+    flex: 1;
+    transition: all 1s ease-in-out;
+    height: 75vmin;
+    position: relative;
+}
+  
+.database-container .card:hover{
+    flex-grow: 2.10;
+}
+
+.database-container .card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    
+}
+
+.database-container .card a {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    
+}
+
+.database-container .card a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.database-container a:hover i,
+.database-container a:hover::before{
+    opacity: .25;
+
+}
+
+.database-container .card:not(:nth-child(4)) {
+    margin-right: 1em;
+}
+
+.card{
+    /*this changes the outline around the cards*/
+    background-color: black;
+}
+
+.database-container h1{
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+
+
+/*-----------EXTRA HEADING---------*/
+.extras-heading h1{
+    text-align: center;
+    font-family: Oswald;
+    text-transform: uppercase;
+    font-size: 6vw;
+    transform: none;
+    padding-top: 0vw;
+    padding-bottom: 0vw;
+}
+
+
+
+
+
+
+/*-----------EXTRAS GALLERY---------*/
+#twitter-section{
+    margin-top: 0vw;
+}
+
+#twitter-section .col-lg-6{
+    padding: 3vw;
+}
+
+#bonus-images a{
+    text-decoration: none;
+}
+
+.bonus-one{
+    background-image: url(images/ConceptsWebsiteRegular.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    height: 30vw;
+
+
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(114, 114, 114, 0.5));
+    filter: drop-shadow(1px 1px 1px rgb(100, 100, 100));
+}
+
+.bonus-one h2{
+    font-family: Oswald;
+    font-size: 3vw;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.bonus-one h2:before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    left: 22%;
+    bottom: -.7vw;
+    border-bottom: .25vw solid #ffffff;
+}
+
+#twitter-section .twitter-timeline{
+    width: 100%;
+    height: auto;
+}
+
+.twitter-timeline{
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(114, 114, 114, 0.5));
+    filter: drop-shadow(1px 1px 1px rgb(114, 114, 114));
+}
+
+
+
+
+
+
+
+
+/*-----------------------FOOTER-------------------------*/
+footer{
+    margin-top: 5vw;
+    background-color: #222222;
+    color: #f7f7f7;
+    padding-top: 1.5vw;
+}
+
+#footer-buttonCSS{
+    text-decoration: none;
+    font-family: 'Roboto' serif;
+    letter-spacing: 1px;
+    font-size: 17px;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+
+#footer-logo img{
+    border-right: 3px solid white;
+}
+
+.container-fluid h5{
+    font-family: 'Roboto' sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 1rem;
+}
+
+.container-fluid h6{
+    font-size: 20px;
+}
+
+.container-fluid h4{
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.container-fluid h3{
+    font-size: 10px;
+}
+
+#footer-container a{
+    color: white;
+    font-family: 'Roboto' serif;
+}
+
+#footer-container a:hover{
+        content: "";
+        position: relative;
+        left: 0;
+        width: 0%;
+        border-bottom: 3px solid white;
+        transition: 0.3s ease;
+}
+        
+#footer-container:hover:after {
+        width: 100%;
+}
+
+
+
+
+
+
+/*-------------MEDIA CHANGES----------*/
+@media (max-width: 2200px){
+    #navbarResponsive{
+        font-family: 'Roboto';
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 1324px){
+    .news-gallery{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 3.0rem;
+        grid-template-areas: 
+            'img-1'
+            'img-2'
+            'img-3'
+    }
+
+    .news-gallery a{
+        height: 30rem;
+    }
+
+    .news-gallery .img-3{
+        background-position: center;
+    }
+
+    .database-gallery .card {
+        height: 40vmin;
+    }
+    
+    .database-container .card:hover{
+        flex-grow: 1.5;
+    }
+
+    .database-container .card:not(:nth-child(4)) {
+        margin-right: .25em;
+    }
+}
+
+@media (max-width: 992px){
+    .navbar{
+        background-color: rgb(0, 33, 165);
+    }
+
+    #navbarResponsive{
+        text-align: center;
+        font-family: 'Roboto';
+        text-transform: uppercase;
+    }
+
+    #navbarResponsive ul li a{
+        padding-top: 2px;
+        font-size: 4vw;
+    }
+
+    .nav-item:after{
+        display: none;
+    }
+
+    #slides{
+        top: 0;
+    }
+
+    .news-bar{
+        transform: none;
+    }
+
+    .news-bar h1{
+        padding: 10px;
+    }
+
+    .news-gallery a{
+        height: 22rem;
+    }
+
+
+    #twitter-section .col-lg-6{
+        padding-right: 8vw;
+        padding-left: 8vw;
+    }
+
+    #twitter-section{
+        margin-bottom: 20px;
+    }
+
+    #twitter-section .col-lg-6 a{
+        width: 100%;
+        height: auto;
+        min-height: 30vw;
+    }
+
+    #bonus-one, #bonus-two{
+        margin: 0;
+        margin-bottom: 5vw;
+    }
+
+    #twitter-feed{
+        height: 60vw;
+    }
+
+    .bonus-one{
+        height: 50vw;
+    }
+
+    .bonus-one h2{
+        font-size: 4vw;
+    }
+
+    #rights-reserved{
+        padding-bottom: 2vw;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    #footer-logo img{
+        border-right: none;
+    }
+
+    #smallHeading{
+        font-size: 2.2vw;
+    }
+
+    .col-md{
+        text-align: center !important;
+    }
+
+    #footer-logo{
+        margin-bottom: 5vw;
+    }
+
+    #footer-logo img{
+        width: 125px;
+        height: 120px;
+    }
+
+    .col-md{
+        margin: 3vw;
+    }
+
+    .col-12{
+        padding: 10vw;
+    }
+
+    .container-fluid h5{
+        font-size: 22px;
+        padding: .5rem;
+    }
+
+    .container-fluid p{
+        font-size: 13px;
+        margin: 3vw;
+    }
+}
+
+@media (max-width: 576px){
+    .navbar-brand img{
+        width: 230px;
+        height: 35px;
+    }
+
+    .carousel-caption{
+        top: 25vw;
+    }
+
+    .carousel-indicators li{
+        margin: 5px;
+        width: 30px;
+        height: 2.5px;
+    }
+
+    #buttonCSS{
+        padding: .25rem;
+        font-size: 2.3vw;
+    }
+
+    #smallHeading{
+        margin: 0;
+        font-size: 2.5vw;
+    }
+
+    .news-gallery a{
+        max-height: 10rem;
+    }
+
+    .news-gallery{
+        grid-gap: 2.0rem;
+    }
+
+    .img-caption{
+        font-size: 12pt;
+    }
+
+    .img-sub-caption{
+        font-size: 8pt;
+    }
+
+    .news-gallery .img-1{
+        box-shadow: inset 0px -55px 30px rgba(0, 0, 0, 0.75);
+    }
+    
+    .news-gallery .img-2{
+        box-shadow: inset 0px -55px 30px rgba(0, 0, 0, 0.75);
+    }
+    
+    .news-gallery .img-3{
+        box-shadow: inset 0px -55px 30px rgba(0, 0, 0, 0.75);
+    }
+
+    .database-gallery{
+        margin: 2vw;
+    }
+
+}
