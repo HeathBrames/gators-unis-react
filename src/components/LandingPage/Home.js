@@ -7,7 +7,7 @@ import './Home.css';
 
 const Home = (props)=> {
     return (
-        <div className="AppTwo">
+        <div className="AppTwo0">
         <nav className="navbar navbar-expand-lg navbar-dark sticky-top" id="navigation-bar">
 
             <div className="container-fluid">
