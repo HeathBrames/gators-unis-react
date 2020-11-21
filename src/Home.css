@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: rgb(185, 146, 146);
+    background-color: rgb(255, 255, 255);
       height: 100%;
       width: 100%;
       display: flex;
@@ -140,7 +140,7 @@ body {
     max-width: 120rem;
     margin: auto;
     padding: 0 1.5rem;
-    background-color: rgb(185, 146, 146);
+    background-color: rgb(255, 255, 255);
 }
 
 .news-gallery{

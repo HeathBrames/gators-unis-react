@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState, useEffect } from "react";
 import './Home.css';
 
 import websiteLogo from "./images/WebsiteLogoPNG3.png";
@@ -10,16 +11,28 @@ import uniformTwo from "./images/JerseyMobileWebsiteUpdated.jpg";
 import uniformThree from "./images/PantsMobileWebsiteUpdated.jpg";
 import uniformFour from "./images/FullUniformMobileWebsiteUpdated.jpg"
 import footerHelmet from "./images/footerHelmet.png";
-/*import ReactDOM from 'react-dom';*/
+
 
 
 const Home = (props)=> {
+
+    //function that changes the background of the navbar upon scroll
+    //boolean state value, set it to true when the screen is scrolled past 400
+    //the nav class is rendered conditionally on the state, if state == true, make it blue, else render normal
+    const [scroll, setScroll] = useState(false);
+        useEffect(() => {
+        window.addEventListener("scroll", () => {
+        setScroll(window.scrollY > 400);
+    }); 
+    }, []); 
+
+    //this is the JSX for the landingpage
     return (
         <div className="AppTwo">
             {/* this is the navbar */}
-            <nav className="navbar navbar-expand-lg navbar-dark sticky-top" id="navigation-bar">
+            <nav className={scroll ? 'navbar navbar-expand-lg navbar-dark sticky-top scrolled' : 'navbar navbar-expand-lg navbar-dark sticky-top'} id="navigation-bar">
                     <div className="container-fluid">
-                        <a className="navbar-brand" href = "#"><img src={websiteLogo} style={{width: '350px', height: '50px'}} /></a>
+                        <a className="navbar-brand" href = "#"><img src={websiteLogo} style={{width: '350px', height: '50px'}} alt="logo"/></a>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" 
                         data-target="#navbarResponsive">
                             <span className="navbar-toggler-icon"></span>
@@ -182,7 +195,7 @@ const Home = (props)=> {
                 <div class="container-fluid padding" id="footer-container">
                     <div class="row">
                         <div class="col-md text-center" id="footer-logo">
-                            <img src={footerHelmet} style = {{width: '205px', height: '200px'}}/>
+                            <img src={footerHelmet} style = {{width: '205px', height: '200px'}} alt="footerImg"/>
                             <h6>@GatorsUnis</h6>
                         </div>
                         <div class="col-md text-left">
