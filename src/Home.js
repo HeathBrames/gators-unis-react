@@ -1,5 +1,7 @@
 import React from 'react';
 import './Home.css';
+
+import websiteLogo from "./images/WebsiteLogoPNG3.png";
 import carouselOne from "./images/croppedPerine2.jpg";
 import carouselTwo from "./images/WhiteHelmetCarouselNew.jpg";
 import carouselThree from "./images/MullenCarouselNew.jpg";
@@ -7,10 +9,8 @@ import uniformOne from "./images/HelmetMobileWebsite.jpg";
 import uniformTwo from "./images/JerseyMobileWebsiteUpdated.jpg";
 import uniformThree from "./images/PantsMobileWebsiteUpdated.jpg";
 import uniformFour from "./images/FullUniformMobileWebsiteUpdated.jpg"
+import footerHelmet from "./images/footerHelmet.png";
 /*import ReactDOM from 'react-dom';*/
-
-
-
 
 
 const Home = (props)=> {
@@ -19,7 +19,7 @@ const Home = (props)=> {
             {/* this is the navbar */}
             <nav className="navbar navbar-expand-lg navbar-dark sticky-top" id="navigation-bar">
                     <div className="container-fluid">
-                        <a className="navbar-brand"></a>
+                        <a className="navbar-brand" href = "#"><img src={websiteLogo} style={{width: '350px', height: '50px'}} /></a>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" 
                         data-target="#navbarResponsive">
                             <span className="navbar-toggler-icon"></span>
@@ -182,7 +182,7 @@ const Home = (props)=> {
                 <div class="container-fluid padding" id="footer-container">
                     <div class="row">
                         <div class="col-md text-center" id="footer-logo">
-                            <img src="images/footerHelmet.png" />
+                            <img src={footerHelmet} style = {{width: '205px', height: '200px'}}/>
                             <h6>@GatorsUnis</h6>
                         </div>
                         <div class="col-md text-left">
