@@ -177,7 +177,47 @@ const Home = (props)=> {
                 </div>
             </div>
         
-        
+            {/*this is the footer section*/}
+            <footer>
+                <div class="container-fluid padding" id="footer-container">
+                    <div class="row">
+                        <div class="col-md text-center" id="footer-logo">
+                            <img src="images/footerHelmet.png" />
+                            <h6>@GatorsUnis</h6>
+                        </div>
+                        <div class="col-md text-left">
+                            <h5>Explore</h5>
+                            <p><a href="football.html" style={{textDecoration: 'none'}}>Football</a></p>
+                            <p><a href="https://medium.com/@gatorsunis" style={{textDecoration: 'none'}}>News</a></p>
+                            <p><a href="https://www.behance.net/gallery/96730413/Florida-Gators-Concept-Uniforms-GatorsUnis" style={{textDecoration: 'none'}}>Concepts</a></p>
+                            <p><a href="about.html" style={{textDecoration: 'none'}}>About</a></p>
+                        </div>
+                        <div class="col-md text-left">
+                            <h5>Follow</h5>
+                            <p><a href="https://twitter.com/GatorsUnis" style={{textDecoration: 'none'}}>Twittter</a></p>
+                            <p><a href="https://www.instagram.com/gatorsuniforms/" style={{textDecoration: 'none'}}>Instagram</a></p>
+                            <p><a href="https://www.facebook.com/GatorsUnis" style={{textDecoration: 'none'}}>Facebook</a></p>
+                        </div>
+                        <div class="col-md text-left">
+                            <h5>Uniform Resources</h5>
+                            <p><a href="https://news.nike.com/news/nike-vapor-untouchable-performance-system" style={{textDecoration: 'none'}}>Vapor Untouchable</a></p>
+                            <p><a href="https://boards.sportslogos.net/topic/106196-nike-vapor-untouchable-and-mach-speed-svg-and-pdf-formats/" style={{textDecoration: 'none'}}>Template Files</a></p>
+                        </div>
+                        <div class="col-md text-center" id="rights-reserved">
+                            <h5>Contact</h5>
+                            <p>Need branding help? Need new uniforms designed for your school?</p>
+                            <a href="https://twitter.com/messages/compose?recipient_id=1016413317626236928"><button type="button" class="btn btn-outline-light btn-lg" id="footer-buttonCSS">Let's Get Started</button></a>
+                        </div>
+                        <div class="col-12 text-center">
+                            <h4>2020 Gators Uniform Tracker | All Rights Reserved</h4>
+                            <h3>NOTE: This website and information provided is NOT affiliated with the University of Florida, the Florida Gators, or the UAA. All logos, uniforms, and content were recreated under <br />
+                                the trademark Fair Use policy (U.S. Trademark Law) for the sole purpose of news reporting, commentary, historic preservation, and educational purposes. <br />
+                                No copyright intended. All images are the property of their respective owners.
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         
         
         
