@@ -201,7 +201,7 @@ body{
 }
 
 
-.news-gallery .img-1{
+/*.news-gallery .img-1{
     grid-area: img-1;
     background-image: url("images/Zero.jpg");
     box-shadow: inset 0px -100px 30px rgba(0, 0, 0, 0.6);
@@ -224,7 +224,7 @@ body{
     -webkit-filter: drop-shadow(1px 1px 1px rgba(114, 114, 114, 0.5));
     filter: drop-shadow(1px 1px 1px rgb(114, 114, 114));
 }
-
+*/
 .img-caption{
     position: absolute;
     color: white;
@@ -371,7 +371,7 @@ body{
     text-decoration: none;
 }
 
-.bonus-one{
+/*.bonus-one{
     background-image: url(images/ConceptsWebsiteRegular.jpg);
     background-size: cover;
     display: flex;
@@ -385,6 +385,7 @@ body{
     -webkit-filter: drop-shadow(1px 1px 1px rgba(114, 114, 114, 0.5));
     filter: drop-shadow(1px 1px 1px rgb(100, 100, 100));
 }
+*/
 
 .bonus-one h2{
     font-family: Oswald;
