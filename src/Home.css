@@ -1,3 +1,15 @@
+body {
+    margin: 0;
+    background-color: rgb(185, 146, 146);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+}
+
+
+
+/*Navbar CSS*/
 .navbar{
     background: transparent;
     transition: 0.25s ease-in;
@@ -42,4 +54,330 @@
 
 .navbar-brand{
     padding-bottom: .1rem;
+}
+
+/*Carousel CSS*/
+.carousel-caption{
+    transform: translateX(-17%) translateY(-10vw);
+    position: absolute;
+    text-align: left;
+}
+
+.carousel-caption h2{
+    font-family: Oswald;
+    text-transform: uppercase;
+    text-align: center;
+
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+}
+
+.carousel-indicators{
+    padding: 10px;
+}
+
+.carousel-indicators li:hover{
+    cursor: pointer;
+}
+
+.carousel-indicators li{
+    margin: 5px;
+    width: 50px;
+    height: 4px;
+}
+
+
+#slides{
+    top: -85px;
+}
+
+#bigHeading{
+    font-size: 5.75vw;
+}
+
+#smallHeading{
+    font-family: Robot 'Regular';
+    font-size: 1.63vw;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    /*text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;*/
+}
+
+#buttonCSS{
+    font-family: Oswald;
+    font-size: 1.6vw;
+    text-transform: uppercase;
+}
+
+/*News headline css*/
+.news-bar{
+    transform: translateY(-2vw);
+}
+
+.news-bar h1{
+        font-family: Oswald;
+        text-transform: uppercase;
+        text-align: center;
+    
+        padding: 0px;
+        margin: 0px;
+        font-size: 6vw;
+}
+
+/*News gallery css*/
+.conatiner-gallery,
+.container-gallery::before,
+.container-gallery::after{
+    padding: 0;
+    box-sizing: border-box;
+    margin: auto;
+
+}
+
+.container-gallery{
+    width: 100%;
+    max-width: 120rem;
+    margin: auto;
+    padding: 0 1.5rem;
+    background-color: rgb(185, 146, 146);
+}
+
+.news-gallery{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 4.0rem;
+    grid-template-areas: 
+        'img-1 img-2 img-3'
+}
+
+.news-gallery a{
+    width: 100%;
+    height: 20vw;
+    
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-gallery a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.news-gallery a:hover i,
+.news-gallery a:hover::before{
+    opacity: 1;
+
+}
+
+
+.news-gallery .img-1{
+    grid-area: img-1;
+    background-image: url("images/Zero.jpg");
+    box-shadow: inset 0px -100px 30px rgba(0, 0, 0, 0.6);
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(114, 114, 114, 0.5));
+    filter: drop-shadow(1px 1px 1px rgb(114, 114, 114));
+}
+
+.news-gallery .img-2{
+    grid-area: img-2;
+    background-image: url("images/mullenwebsite.jpeg");
+    box-shadow: inset 0px -100px 30px rgba(0, 0, 0, 0.6);
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(114, 114, 114, 0.5));
+    filter: drop-shadow(1px 1px 1px rgb(114, 114, 114));
+}
+
+.news-gallery .img-3{
+    grid-area: img-3;
+    background-image: url("images/FSUnews.jpg");
+    box-shadow: inset 0px -100px 30px rgba(0, 0, 0, 0.6);
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(114, 114, 114, 0.5));
+    filter: drop-shadow(1px 1px 1px rgb(114, 114, 114));
+}
+
+.img-caption{
+    position: absolute;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 24pt;
+    bottom: 15px;
+    left: 15px;
+}
+
+.img-sub-caption{
+    color: white;
+    font-family: 'Roboto';
+    font-size: 13pt;
+}
+
+
+/*Database CSS*/
+.database-heading h1{
+    text-align: center;
+    font-family: Oswald;
+    text-transform: uppercase;
+    font-size: 6vw;
+    transform: none;
+    padding-top: 4vw;
+}
+/*-------------DATABASE GALLERY---------*/  
+.database-container {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.database-gallery{
+    display: flex;
+    margin: 3.5vw;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.database-gallery .card {
+    margin-top: 0rem;
+    flex: 1;
+    transition: all 1s ease-in-out;
+    height: 75vmin;
+    position: relative;
+}
+  
+.database-container .card:hover{
+    flex-grow: 2.10;
+}
+
+.database-container .card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    
+}
+
+.database-container .card a {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    
+}
+
+.database-container .card a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.database-container a:hover i,
+.database-container a:hover::before{
+    opacity: .25;
+
+}
+
+.database-container .card:not(:nth-child(4)) {
+    margin-right: 1em;
+}
+
+.card{
+    /*this changes the outline around the cards*/
+    background-color: black;
+}
+
+.database-container h1{
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+
+
+
+/*Extras gallery css*/
+.extras-heading h1{
+    text-align: center;
+    font-family: Oswald;
+    text-transform: uppercase;
+    font-size: 6vw;
+    transform: none;
+    padding-top: 0vw;
+    padding-bottom: 0vw;
+}
+
+
+#twitter-section{
+    margin-top: 0vw;
+}
+
+#twitter-section .col-lg-6{
+    padding: 3vw;
+}
+
+#bonus-images a{
+    text-decoration: none;
+}
+
+.bonus-one{
+    background-image: url(images/ConceptsWebsiteRegular.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    height: 30vw;
+
+
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(114, 114, 114, 0.5));
+    filter: drop-shadow(1px 1px 1px rgb(100, 100, 100));
+}
+
+.bonus-one h2{
+    font-family: Oswald;
+    font-size: 3vw;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.bonus-one h2:before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    left: 22%;
+    bottom: -.7vw;
+    border-bottom: .25vw solid #ffffff;
+}
+
+#twitter-section .twitter-timeline{
+    width: 100%;
+    height: auto;
+}
+
+.twitter-timeline{
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(114, 114, 114, 0.5));
+    filter: drop-shadow(1px 1px 1px rgb(114, 114, 114));
 }
