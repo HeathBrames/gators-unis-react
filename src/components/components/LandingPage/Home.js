@@ -1,5 +1,5 @@
 import React from 'react';
-import './components/LandingPage/Home.css';
+import './components/components/LandingPage/Home.css';
 import ReactDOM from 'react-dom';
 
 
