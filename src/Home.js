@@ -178,6 +178,7 @@ const Home = (props)=> {
                 <div class="container-fluid padding" id="twitter-section">
                     <div class="row padding">
                         <div class="col-lg-6" id="twitter-feed">
+                            <a class="twitter-timeline tw-align-center" data-width="100%" data-height="100%" data-theme="dark" href="https://twitter.com/GatorsUnis?ref_src=twsrc%5Etfw">Tweets by GatorsUnis</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         </div>
                         <div class="col-lg-6" id="bonus-images">
                             <a href="https://www.behance.net/gallery/96730413/Florida-Gators-Concept-Uniforms-GatorsUnis">
